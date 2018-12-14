@@ -6,8 +6,14 @@
   <title>David Solodukhin</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 	
-  
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+ 
+
       <link rel="stylesheet" href="css/style.css">
 	
   
@@ -17,12 +23,25 @@
 
   <div class="overlay"></div>
 <div class="terminal">
-  <h1>Hey, <span class="errorcode">I'm David</span></h1>
-  <p class="output">Software Engineer, Infosec enthusiast, hacker. Always looking out for interesting things to work on.</p>
-  <p class="output">For a resume, click <a href="resume/resume.pdf">this link</a> or click <a href="#" onclick=copy()>here</a> if you want to reach out</p>
-  <p class="output" id='out' >I'm sorry Dave, I'm afraid I can't let you do that...</p>
-<input id = 'c' value="david.solodukhin$$$@gatech.edu" style='opacity:0.01;'>
-<p class="output"> <a href="https://github.com/David-Solodukhin"class="fa fa-github" aria-hidden="true"></a></p>
+  <h1><span class="errorcode"> david@pc:~$ </span>echo "David Solodukhin"</h1>
+  <p class="output">printenv USERS_INFO | grep `whoami`</p>
+  <p class="out"> David: Software Engineer, Infosec & Systems Enthusiast. Always looking out for interesting things to work on.</p>
+  <p class="output">ls work -l</p>
+  <p class="out">
+r-rw-r--r- 1 david 1324 <span class = "date"></span> README.md<br>
+drwxr-xr-x 2 david 4096 <span class = "date"></span> css<br>
+drwxr-xr-x 2 david 4096 <span class = "date"></span> fonts<br>
+-rw-r--r-- 1 david 1527 <span class  = "date"></span> <a href = "index.html"> index.html</a><br>
+drwxr-xr-x 2 david 4096 <span class  = "date"></span> <a href = "resume/resume.pdf">resume</a><br>
+</p>
+
+ <p class="output">tail -5 work/README.md</p>
+ <p class = "out">Check my stuff out! <a href="https://github.com/David-Solodukhin"class="fa fa-github" aria-hidden="true"></a>,  <a href="https://www.youtube.com/channel/UCnNyWBPF0AaCJsLPej214Dg"class="fa fa-youtube" aria-hidden="true"></a>
+ <a href="#" onclick=copy()>or contact me!</a> </p>
+
+
+  <p class="output" id = "last"></p>
+
   <script>
   function copy() {
 		var text = document.getElementById('c');
@@ -30,12 +49,32 @@
 		document.getElementById('c').select();
 		document.execCommand('copy');
 		
-		document.getElementById('out').innerHTML="email copied to your clipboard";
+		$("<p class = 'out'> email copied to your clipboard</p>").appendTo(".terminal");
+
 		
 	}
+
+
+var options = {
+  strings: ["uname -r ^1000 <br><p class = 'out'> buzzLinux 4.18.1 - Georgia Institute of Technology</p>"],
+  typeSpeed: 50
+}
+
+var typed = new Typed("#last", options);
+
+
+  </script>
+  <script>
+    var date = new Date(),
+  locale = "en-us",
+  month = date.toLocaleString(locale, {
+    month: "long"
+  });
+
+    $("span.date").html(month.substring(0,3) + " " + date.getDate() + " " + date.getHours()+":"+date.getMinutes());
   </script>
 </div>
-  
+  <input id = 'c' value="david.solodukhin$$$@gatech.edu" style='opacity:0.001;'>
   
 
 </body>
