@@ -10,7 +10,6 @@
 	
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
  
 
@@ -23,19 +22,19 @@
 
   <div class="overlay"></div>
 <div class="terminal">
-  <h1><span class="errorcode"> david@pc:~$ </span>echo "David Solodukhin"</h1>
-  <p class="output">printenv USERS_INFO | grep `whoami`</p>
-  <p class="out"> David: Software Engineer, Infosec & Systems Enthusiast. Always looking out for interesting things to work on.</p>
+  <h1><span class="errorcode"> david@pc:~$ </span> source ~/.David_Solodukhin</h1>
+  <p class="output">env USERS | grep `whoami`</p>
+  <p class="out"> David: Software Engineer, Systems Development & InfoSec Enthusiast. Always eyeing interesting things to work on.</p>
   <p class="output">ls work -l</p>
   <p class="out">
 r-rw-r--r- 1 david 1324 <span class = "date"></span> README.md<br>
 drwxr-xr-x 2 david 4096 <span class = "date"></span> css<br>
 drwxr-xr-x 2 david 4096 <span class = "date"></span> fonts<br>
 -rw-r--r-- 1 david 1527 <span class  = "date"></span> <a href = "index.html"> index.html</a><br>
-drwxr-xr-x 2 david 4096 <span class  = "date"></span> <a href = "https://raw.githubusercontent.com/David-Solodukhin/resume/07b8f1269a8df6c0a03259442747036517263965/david_solodukhin_resume.pdf">resume</a><br>
+r-rw-r--r- 2 david 1351 <span class  = "date"></span> <a href = "https://github.com/David-Solodukhin/resume/blob/master/david_solodukhin_resume.pdf">resume.pdf</a><br>
 </p>
 
- <p class="output">tail -5 work/README.md</p>
+ <p class="output">tail work/README.md</p>
  <p class = "out">Check my stuff out! <a href="https://github.com/David-Solodukhin"class="fa fa-github" aria-hidden="true"></a>,  <a href="https://www.youtube.com/channel/UCnNyWBPF0AaCJsLPej214Dg"class="fa fa-youtube" aria-hidden="true"></a>
  <a href="#" onclick=copy()>or contact me!</a> </p>
 
@@ -56,22 +55,19 @@ drwxr-xr-x 2 david 4096 <span class  = "date"></span> <a href = "https://raw.git
 
 
 var options = {
-  strings: ["uname -r ^1000 <br><p class = 'out'> buzzLinux 4.18.1 - Georgia Institute of Technology</p>"],
+  strings: [
+     `uname -r ^400 <br><p class = 'out'> buzzLinux 4.18.1 - Georgia Institute of Technology</p> ^400 <p class='output'>cat where_am_i_now</p>
+<a href='https://linkedin.com/in/david-solodukhin'>-->LinkedIn<--</a>
+<p class='output'> </p>`],
   typeSpeed: 50
 }
-
 var typed = new Typed("#last", options);
-
-
-  </script>
-  <script>
-    var date = new Date(),
-  locale = "en-us",
-  month = date.toLocaleString(locale, {
-    month: "long"
-  });
-
-    $("span.date").html(month.substring(0,3) + " " + date.getDate() + " " + date.getHours()+":"+date.getMinutes());
+</script>
+<script>
+   var date = new Date(),
+   locale = "en-us",
+   month = date.toLocaleString(locale, {month: "long"});
+   $("span.date").html(month.substring(0,3) + " " + date.getDate() + " " + date.getHours()+":"+date.getMinutes());
   </script>
 </div>
   <input id = 'c' value="david.solodukhin$$$@gatech.edu" style='opacity:0.001;'>
