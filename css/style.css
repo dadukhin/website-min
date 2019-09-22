@@ -87,7 +87,7 @@ body {
 
 .output::before {
   color: white;
-  content: "david@pc:~$ ";
+  content: "david@git:~$ ";
 }
 
 /*
@@ -117,4 +117,8 @@ a::after {
 */
 .errorcode {
   color: white;
+}
+.errorcode::before {
+  color: white;
+  content: "david@git:~$ ";
 }
