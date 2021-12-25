@@ -22,8 +22,8 @@
   <div class="overlay"></div>
   <div class="terminal">
     <h1><span class="errorcode">  </span> source ~/.David_Solodukhin</h1>
-    <p class="output">env grep `whoami`</p>
-    <p class="out"> David = Software Engineer, Systems Development & InfoSec Enthusiast.</p>
+    <p class="output">env | grep `whoami`</p>
+    <p class="out"> David=Software_Engineer:Systems_Developer:InfoSec_Enthusiast</p>
     <p class="output">ls work -l</p>
     <p class="out">
       -rw-r--r-- 1 david 1527 <span class="date"></span> <a href="index.html"> index.html</a><br>
@@ -32,10 +32,10 @@
     </p>
 
     <p class="output">tail README.md</p>
-    <p class="out">Check my stuff out! <a href="https://github.com/David-Solodukhin" class="fa fa-github"
+    <p class="out"> <a href="https://github.com/David-Solodukhin" class="fa fa-github"
         aria-hidden="true"></a>, <a href="https://www.youtube.com/channel/UCnNyWBPF0AaCJsLPej214Dg"
         class="fa fa-youtube" aria-hidden="true"></a>
-      <a href="#" onclick=copy()>or contact me!</a> </p>
+     <a href="#" onclick=copy()>or contact me</u></a> </p>
 
 
     <p class="output" id="last"></p>
@@ -65,7 +65,7 @@
 
       var options = {
         strings: [
-          `uname -r ^400 <br><p class = 'out'> buzzLinux 4.18.1 - Georgia Institute of Technology</p> ^400 <p class='output'>./where_am_i_now</p>
+          `uname -r ^400 <br><p class = 'out'> buzzLinux 4.18.1 - Georgia Institute of Technology</p> ^400 <p class='output'>sh ~/where_am_i_now</p>
 <a href='https://linkedin.com/in/david-solodukhin'>-->LinkedIn<--</a>
 `],
         typeSpeed: 30,
