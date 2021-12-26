@@ -56,9 +56,13 @@
         text.value = text.value.replace('$$$', '');
         document.getElementById('c').select();
         document.execCommand('copy');
+         navigator.clipboard.writeText(text.value).then(function() {
+  $("<p class = 'out'> email copied to your clipboard</p>").appendTo(".terminal");
 
-        $("<p class = 'out'> email copied to your clipboard</p>").appendTo(".terminal");
-
+                }, function() {
+$("<p class = 'out'>" + text.value + "</p>").appendTo(".terminal"); 
+         });
+        
 
       }
 
@@ -80,7 +84,7 @@
       $("span.date").html(month.substring(0, 3) + " " + date.getDate() + " " + date.getHours() + ":" + date.getMinutes());
     </script>
   </div>
-  <input id='c' value="david.solodukhin$$$@gatech.edu" style='opacity:0.001;'>
+  <input id='c' value="david.solodukhin$$$@gatech.edu" style='display:none;'>
 
 
 </body>
